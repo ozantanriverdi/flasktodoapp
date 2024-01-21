@@ -17,7 +17,7 @@ def index():
 
 @app.route("/complete/<string:id>")
 def completeTodo(id):
-    #.first to get the first occurence of the id (not needed for id)
+    # first to get the first occurence of the id (not needed for id)
     todo = Todo.query.filter_by(id = id).first()
     todo.complete = not todo.complete
     
